@@ -1,4 +1,4 @@
-package be.swsb.tl.domain.quote;
+package be.swsb.tl.domain;
 
 public class DomainValidationException extends RuntimeException {
     public DomainValidationException(String message) {

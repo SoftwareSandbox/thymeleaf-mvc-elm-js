@@ -1,5 +1,7 @@
 package be.swsb.tl.domain.quote;
 
+import be.swsb.tl.domain.DomainValidationException;
+
 import java.time.LocalDateTime;
 import java.util.UUID;
 

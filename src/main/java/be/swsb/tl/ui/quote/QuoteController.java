@@ -1,6 +1,6 @@
 package be.swsb.tl.ui.quote;
 
-import be.swsb.tl.domain.quote.DomainValidationException;
+import be.swsb.tl.domain.DomainValidationException;
 import be.swsb.tl.domain.quote.Quote;
 import be.swsb.tl.service.quote.QuoteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,6 @@ public class QuoteController {
 
     private QuoteService quoteService;
 
-    @Autowired
     public QuoteController(QuoteService quoteService) {
         this.quoteService = quoteService;
     }
