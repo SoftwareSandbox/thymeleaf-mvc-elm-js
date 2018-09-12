@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>New Quote</title>
+    <script th:inline="javascript">
+        window.onload = function () {
+            let countryCodes = /*[[${countryCodes}]]*/ [];
+            let cityCodes = /*[[${cityCodes}]]*/ [];
+        };
+    </script>
+
 </head>
 <body>
-    <h1>New Quote</h1>
-    <div data-th-unless="${#strings.isEmpty(message)}">
-        <p data-th-text="${message}"></p>
-    </div>
-    <form data-th-action="@{/quote/create}" data-th-method="post" data-th-object="${quote}">
-        <p><label for="author">Author: </label><input id="author" data-th-field="*{author}" type="text" autofocus></p>
-        <p><label for="text">Text: </label><input id="text"  data-th-field="*{text}" type="text"></p>
-        <p><input type="submit" value="Submit"></p>
-    </form>
+<h1>New Quote</h1>
+<div data-th-unless="${#strings.isEmpty(message)}">
+    <p data-th-text="${message}"></p>
+</div>
+<form data-th-action="@{/quote/create}" data-th-method="post" data-th-object="${quote}">
+    <p><label for="author">Author: </label><input id="author" data-th-field="*{author}" type="text" autofocus></p>
+    <p><label for="text">Text: </label><input id="text" data-th-field="*{text}" type="text"></p>
+    <p><input type="submit" value="Submit"></p>
+</form>
 </body>
 </html>
